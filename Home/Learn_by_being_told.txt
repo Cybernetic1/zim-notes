@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-02-25T11:41:04+08:00
+
+====== Learn by being told ======
+Created Wednesday 25 February 2015
+
+Now we can learn actions from examples, but how about **learn by being told** and **cognitive problem-solving**?
+
+Cognitive problem solving may require NL, but it seems advantageous to start this //as soon as possible//.
+
+Prerequisites:
+* some programming concepts
+* some natural language
+
+We can use conditional statements like this:
+	condition → program fragment
+But the problem is:  Can a program be constructed piece-wise, using such fragments only?
+
+Somehow a //structure// in mind needs to be constructed, most likely a //tree// structure.    But in general it might be beneficial to be able to hold arbitrary //graph// structures in mind.   Then, what would be the primitive actions?
+
+The problem with list-only is that Genifer cannot reason about //structured programs//.   It needs to formulate the plan and then execute the plan.   Plan = program.
+
+A program is a sequence of actions (or conditional actions).   There needs a way to execute the sequence.   This is a problem because the logic engine only finds derivations (iteratively deepening inferences).    To //execute// a sequence is something extra-logical.   Which means that Genifer should be above all a //program-execution// machine.    The primitive actions include **programmatic actions** plus **logical inference actions**.
+

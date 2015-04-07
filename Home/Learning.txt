@@ -1,0 +1,56 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-01-20T12:38:07+08:00
+
+====== Learning ======
+Created Tuesday 20 January 2015
+
+For individual rules the algorithm is to **generalize** until it is inconsistent with existing knowledge.
+
+Whereas with a **group** of rules the algorithm may have to allow both generalizations and specializations.
+
+多个 dimensions 的普及和特殊化。
+
+但 loop 叙述 或许还能再分解，而且应该由事实诱发。
+
+有 credit assignment 问题，但能否 trace credits？
+
+**宏指令**有个问题，就是令 trace credit 更难。因为宏指令 造成很大的输入-输出差异。
+
+**微指令**的麻煩是： 需要多步進化出來。
+
+但如果 在**泳池**内保存很多法则，则有可能同时搜寻多个分支。 这搜寻是 population co-evolution。
+
+产生了正确答案之后，要分析 inference trace 找出正确的法则，然后加分。
+
+最新的灵感是令所有 action 变**连续**。
+
+概念可以是连续的，但 action 似乎不行，因为 states 是离散的。  除非状态空间也是连续的！
+
+但如何写入连续的状态？  而且还要 tape。
+
+Tape 的用处是记录多个状态。
+
+******************** Friday 30/01/2015 21:11
+发觉 Turing Machine 可以变连续。  逻辑也可以变连续。  然后呢？
+
+整个 paradigm 似乎又再变了。  现在是 dynamical system！
+
+但，proof 变了什么？  可能是 iteration，还有 pattern matching 简化了。
+
+Iteration 需要的是某个 {{./equation.png?type=equation}}.   换转成 logic，那相当於一次 single-step。 而 single-step 的意思是，求取所有 KB 的 consequence 的一步。 那需要将所有 KB formula **matching** 并 **apply** 一次。
+
+现在 matching 已经几乎可以成为一种 algebraic operation，因为有 cone trick。  反而 apply 可能比较麻烦。 Apply 的结果，是箭咀产生新的 formulas。  在我的这个 formulation 之下，似乎是新 **点子** 的产生，但 algebraic logic 则会是 equational consequence。  那能不能说所有 consequences 都已经被 KB 用 equations 确定了？    其实那可以是真的，但实际上未必可行。   除非那 logic 是 complete 的，但我们现在又考虑加入 procedural thinking (Turing machine, for example)。
+
+__Completeness 問題__    有沒有可能將所有 consequence 完全以 **代數方式** 決定？   Turing Machine 的引入 究竟帶來了什麼改變？   首先是引入了形如：
+		condition → action
+的「**條件動作**」。   問題是，這些 action 有可能給出新的 consequences，所以 //破壞了 logic 的完備性//。  亦即是說，**知識** 不全然是 **邏輯推導**，還有可能是 **計算** 的結果。  
+
+********************* Saturday 31/01/2015 22:23
+現在的一個問題就是： //the learned stuff is not incremental //。 The **ontology** may be important, but it cannot be learned easily.    Natural language should be learned incrementally, incorporating the use of procedural elements.   But we seem to require natural language as a prerequisite of other functions — a chicken-and-egg problem.
+
+It may be possible to bootstrap from an artificial language. 
+
+Perhaps I should focus on the avoidance of **grotesquity**.   For instance, the ability to do certain computations too efficiently.   The lists that we are capable of processing should be very short.  
+
+The issue of **continuous programming** depends on whether it will lead to //faster learning //.   So far we can traverse the lattice and use reinforcement learning.  

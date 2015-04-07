@@ -1,0 +1,28 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-03-03T21:46:32+08:00
+
+====== Genifer4 ======
+Created Tuesday 03 March 2015
+
+KB = sum of products = formal series
+
+matching = rule x KB → KB'
+
+application = KB := KB + KB'
+
+deduction = iterate ( matching + apply )
+
+Learning = hierarchical organization of rules, hierarchical search
+	answer:  cone
+	need automatic cone organization
+	the basis may be based on:
+		syntax (?)
+		semantics ( aRb, Liebniz extensionality, etc )
+
+__Need:__  NL
+	NL is not a correspondence or isomorphism, but rather a complex behavioral response that has to be learned
+
+The question is how to learn the NL perception-response behavior.   It seems to be complex on many levels.
+
+We need some kind of all-encompassing learning.   This can be based on syntax and hand-written semantic rules (where "is-a" is treated as an ordinary relation).   

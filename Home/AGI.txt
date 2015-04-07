@@ -1,0 +1,48 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-02-08T17:38:36+08:00
+
+====== AGI ======
+Created Sunday 08 February 2015
+
+__Ingredients:__
+
+1. full algebraization of logic, where inference = equation solving
+2. continuous logic / programs / actions
+3. bag-of-words syntax and semantics (for natural language / logic)
+4. logic + action
+	a. what would be the new inference procedure?
+	b. what is the relation to Turing Machines?
+5. Learning
+	a. genetic learning
+	b. ILP in the traditional sense
+	c. reinforcement learning
+6. concept formation and automatic problem solving
+
+****************** Monday 09/02/2015 21:55
+Seems that the most important step is between "**proof as equation solving**" and Turing machines.
+
+Combining logic inference with Turing machines, all under algebra.
+
+Perhaps substitution can be regarded as inequality?  Then proof = inequality solving = non-linear programming
+
+What would be the logic after augmenting with a Turing machine?  TM would change states, but proof is about finding derivations.  How to reconcile the 2 things?  Seems that TM would include the //machinery// of proof-search.
+
+Also, focus more on "arrow pushing" than proof search, seems to be more insight-gaining.   But the internal states of the logic seem distinct from the states of the TM...  
+
+My plan is to construe the whole system as a "pure" dynamical system?  Then we need to //absorb// the arrow-pushing into the dynamical system.    Then arrow-pushing = some kind of state changes.   The conflict seems to be between __equation-solving__ and __state-changes__.
+
+Perhaps it is better to regard memory as external memory and not as states.  Then our Turing machine is the same as traditional Turing machines.   The TM's state transitons = conditional actions.
+
+**Smoothing** can be done later.
+
+Next is the problem of:  language, automatic problem-solving, and learning.   We don't want to program the thing directly.   But neither is the mode of learning-from-examples natural.   The ideal is to be able to //tell// it what to do.
+
+Use a bunch of natural-language sentences to constrain the search for programs.  But we need some examples as well.  Or perhaps at an early stage we can program it directly?
+
+******************* Tuesday 24/03/2015 14:51
+现在要做的是？  為什麼我希望 fuzzy focus 的時候，要用 competitive mechanism？  那是因為可能會有其他幾個 weaker conclusions 在競爭。  但問題是，那要求 previous answer 對 current answer 做 inhibition，那比較複雜。
+
+为什么会产生这问题呢？   那是因为 focus 变模糊了，所以上一次和今次的 recognition 会有「模糊重叠」。
+
+其实问题可以转化为： next 的目的是要辨认「下一个」项目。 

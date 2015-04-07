@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-03-24T13:10:34+08:00
+
+====== neural-symbolic ======
+Created Tuesday 24 March 2015
+
+__Neural paradigm:__
+genes = NN weights
+NN weights = ? 
+
+NN recognizes classes
+classes ≈ new knowledge ≈ new formulas
+NN weights ≈ how to recognize classes ≈ rules / operators
+
+therefore, genes encode ≈ NN weights ≈ rules / operators
+
+__Logic paradigm:__
+genes = formulas

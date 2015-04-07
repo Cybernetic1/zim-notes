@@ -1,0 +1,199 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-01-15T21:13:24+08:00
+
+====== actions ======
+Created Thursday 15 January 2015
+
+Could Curry-Howard isomorphism be of help?
+
+The relation between programs and logic.  **CHI** says that programs and logic are the same thing.
+
+One problem is that programs would be "too fast".  How to make them slower?
+
+Actual actions would be the result of **many** instructions competing.  Also the instructions should be **short**.
+
+The use of an internal data structure allows short instructions.
+
+About __Fuzzy Matching__:
+We want the action to return quickly, but when it is called a second time perhaps search deeper.  Is that possible?  Or perhaps, calling different times will search different offsets randomly!
+
+Another issue is that the goal should induce programs to solve the problem.  The goal itself induces a number of knowledge items.  Those would be sub-goals.
+
+Another issue is the __timing__ or __order__ of execution.  One way is to be aware of the duration a state has been in (that requires an external clock).  Another way is to count the number of operations that occurred during a state.  Perhaps the best way is to be able to //"do something with strength X"// where X is the number of times to perform an action.
+
+What is my purpose, anyway?  I want instructions to be **short** and versatile.
+
+Another possible trick may be to allow //random// replacements...?  But we still need to set a time duration... right?
+
+Is it better to match target to rules... or doesn't matter?
+
+Or randomly act at all locations?  There may not be a big difference.
+
+//As long as the list is short//, we can use random matching.  But what is the point of random matching?  To eliminate the use of indexes, or the keeping track of sequential procedures.
+
+Then we need to break up longer lists to short lists.
+
+There may be a way to speed up list processing:
+	**Scan list**.  Each element induces a context.
+	Context causes rule-classes to be activated.
+	This is like a bi-directional diffusion.
+
+But can we also avoid **scanning** the list?  What's wrong with indexed processing?  The lack of fuzzy matching.
+
+It seems wrong to have clearly defined elements with sharp boundaries.
+
+Perhaps the input list is clearly defined, but the internal data structure would be a __"fuzzy list"__?
+
+What we need is a data structure that has no clear boundaries.
+
+Or it would be a //highly structured// structure.  Perhaps a highly annotated graph?
+
+At first the sentence would be in an external linked list.  Then the **rigid list** is processed using a single-point focus mechanism.  The result would be stored as a bunch of formulas (which is then isomorphic to a highly annotated graph).
+
+Or maybe the rigid list can be processed with fuzzy focus / look-ahead?
+
+Why do we NOT want rigid focus / indexing?  For then instructions would have to be precise, adding to representational complexity.
+
+****************** Monday 19/01/2015 07:16
+A problem is that an action such as "//write 'a' and move tape left//" is dependent on the state (content) of the tape and therefore is not a "standalone" action.
+
+So program elements should be more "elementary" (in the sense that they should be self-contained **units** that compose more complex ideas).  For example, looping.  But actually, "write symbol and move left" is pretty elementary and compositional.
+
+Perhaps even encode a finite state machine (or HMM) in the actor.  Then it could be used to recognize the "focal point".  Then it would become even more unitary.  Why not?
+
+The second insight is that we //should not use bottom-up loops//.  Pattern recognition should **diffuse** outward from the focal point.  
+
+How to achieve this diffusion?  Well, we need to recognize the POS of words in the sentence, then the POS would be in the context, and the context we can use the context to find relevant rules for matching.  But that depends on //the position of the focal point//.  When the focus changes, the context will also change and the old context has to be //forgotten//.
+
+But if the matching is not an //atomic// action, then necessarily the entire composite action must be subsumed under **the loop**.
+
+But the loops has a **bracket** structure that we must find an algebraic way to represent.  Perhaps this can be done via a context.  A loop is a context.
+
+Could it be possible to //do without loops or indices//?  So every element is addressed by distinctive concepts.
+
+* 应该由目标引发出程式
+* loop 可以用 for-each 来代替
+
+目标 + 知识 = 程式
+
+但仍然好像缺少了什么……  如果知识是进化出来的话 或许更好
+
+**************************** Sunday 01/02/2015 00:16
+Cantonize program:
+	focus list1
+	try to recognize focus
+	focus is a word
+	if cantonize focus = word2
+	append word2 to list2
+	next focus list1
+
+Cantonize program:
+	Cantonize sentence
+	sentence is in list1
+	Cantonize is a kind of transform
+	We transform from sentence to another sentence
+	therefore output is a sentence
+	For this transform, we transform word-by-word
+	That means to scan the sentence word-by-word
+	Because usually the way to process / transform a sentence is to scan word-by-word
+	So we engage in the scan loop which may be primitive ("for-each")
+	And for each focus we perform the Cantonize step
+	Because to Cantonize the whole sentence we Cantonize the elements
+	This property is commonly shared by some transformations / changes
+	And the output of for-each, we append to a list, because we know the output would be a list
+
+To summarize the background knowledge:
+	input is a sequence
+	output would be a list
+	for-each is applicable
+	Cantonize distributes into the list
+
+Such background knowledge guides the search of programs.
+
+__Vague compositions__
+The concept of **vague composition**, and **vague associative arrows**.    In the final stage, the vague bag of concepts points to a single unambiguous concept.
+
+Sentences are vague bags of compositions.  But they may become more and more //structured// through time?
+
+So it seems that the //logic itself// should evolve through time.
+
+*********************** Tuesday 10/02/2015 21:49
+The problem now is how to translate the sentence //structurally//.   In practice the program could be a mix of structural and sequential processing.
+
+But we got to be able to use "bag implication", meaning pattern-matching-by-bags.   For example:
+	if bag contains x → do action
+That is a kind of //weaker// pattern-matching.   Perhaps it can even replace unify?
+
+可能有若干储存器？  那牵涉到储存器的//结构//。  也可以说 **focus** 不是一个原子，而是有//内部结构//！
+
+其实 recognition 是怎样进行的？   当然这过程有 sequential 的特徵。   会不会它本身就是一个原子动作？   换句话说，在一个 data structure 里，找一个很小的子结构，但未必是原子。
+
+而这个 recognition 的过程，似乎是//单向进行 //的：
+	1）在那大结构的部分中，识别出一些归类；  
+	2）然后专注在属於那些归类的小结构中寻找。
+这个模式的原因是： 大结构是 target，而小结构是很多的、属於 background knowledge。
+
+换句话说，要在大结构的局部进行 generalizing classifications。  这些 classifications 应该怎样学习？  
+
+Let's say:  we scan;  the focus //position// is exact.   At this point, several consequences should be pushed forward basing on elements at the **neighborhood** of the position.   In other words, we summarize what is at the focus' neighborhood position.   A question is whether we should make the entire recognition action as //atomic//.
+
+We're now at the old game of organizing //rules// to optimize inference.   But if the rules exist in //continuous space//, perhaps the optimization can be done differently?    Context = a combination of points.   Distance from rule to context can be measured.
+
+__Basic program:__
+	scan
+	recognize
+	convert
+	append
+但现在要考虑 **自动解题** 的要素。 难处是要产生 //有结构// 的答案。
+
+某种 **意识** 是由一些 propositions 代表，而 proposition 可以是 bag-of-words。
+而意识之间有 arrows。   这些 arrows 可以用 **generalized matching**，例如 bag-contains。
+换句话说，这 generalized matching 是在 **rules 空间** 中的 volume match。
+这些 arrows 可以产生个别的结论，但能不能产生整个 //solution program//？
+问题的关键是 looping。   Loop has 2 arguments:  1) over what?  2) do what?
+But this action does not have a simple algebraic counterpart...
+
+__Actions' relation to logic:__
+We can use logic to talk about actions but that seems unsatisfactory because a metric (in action space) probably does not exist.   What is the geometry of actions?   
+
+Now questions are:
+1. loops are not very algebraic
+2. how can we auto-solve loops?  seems OK
+
+__Pattern recognition__
+Something's wrong with pattern recognition...  
+
+Perhaps we do not have a piece of knowledge such as:
+	cantonize ( 什_ 么 ) = 乜
+but we should have rules that leads to the recognition of 什_ 么 .   什么 should be a concept.
+
+但会不会浪费空间？  
+
+首先应该化为：
+	"什" _ "么" → 什么				（这里的箭咀是表示 existence。）
+	cantonize ( 什么 ) = 乜
+
+而，"什" _ "么" 是一个在 list 中存在的事实。  问题是怎样透过 //focus// 提取它。
+
+或者 focus 的作用就是令到 focus 的位置得到 **attention**？   换句话说，关於 list 的一切事实，其实已经在 KB 中以逻辑形式存在？ 
+
+刚才说 list 是原始资料结构。   关於 list 的所有事实都是以逻辑表述，那有什么不妥？   只要关於 list 的动作是表述成 actions 就可以。
+
+Focus 的作用可以是选择 list 中的某些事实，而那些事实可以是 //即时产生 //的。   但似乎还需要 **忘记 **的机制。
+
+* 会不会 cantonize ⊳ list 的 semantics 太复杂？
+
+但 Seh 提到，rewriting 也能达到处理 list 的效果。
+
+* 会不会 rewriting 就是 primitive？
+
+But somehow I feel that list manipulation is also //not primitive// from a neural perspective...
+
+首先我们要令 "什" _ "么" emerge / __manifest__ 出来，意即成为一个 fact。
+
+其实那些 actions 直头是一个 state space，里面有 reward 等等。   这似乎是我们看 actions 的正确观点。 
+
+其实每个 **conditional action**： context → action //就是迷宫中的一格//！
+
+我们现在的这种新 program 方法，究竟是为了什么？   难道纯粹为了像人类的口头说话？
