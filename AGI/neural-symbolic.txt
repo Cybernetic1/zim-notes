@@ -1,0 +1,38 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-03-24T13:10:34+08:00
+
+====== neural-symbolic ======
+Created Tuesday 24 March 2015
+
+__Neural paradigm:__
+genes = NN weights
+NN weights = ? 
+
+NN recognizes classes
+classes ≈ new knowledge ≈ new formulas
+NN weights ≈ how to recognize classes ≈ rules / operators
+
+therefore, genes encode ≈ NN weights ≈ rules / operators
+
+__Logic paradigm:__
+genes = formulas
+
+************************ Friday 01/05/2015 15:16
+__Main plan__
+
+1. What is distributive representation?
+2. How to represent products?
+3. What is the dynamic logic?
+4. What is the distance metric / norm?
+5. Learning algorithm
+
+//Key question://  how does the learning algorithm make use of distance metric?
+
+Gradient may exist but there may be a lot of local minima.
+
+************************** Wednesday 06/05/2015 16:04
+New question.  Even if we have the gradient, local minima and plateaux may still make the technique useless.
+
+We need a structure that is able to record [infinitesimal] changes.
+

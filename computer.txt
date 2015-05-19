@@ -1,0 +1,43 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-04-19T21:52:01+08:00
+
+====== computer ======
+Created Sunday 19 April 2015
+
+__Lookup own IP__
+dig +short myip.opendns.com @resolver1.opendns.com
+
+__Reverse SSH TUNNEL__
+
+ssh hana@localhost -p 10001
+
+
+__=====VPN=====__
+
+First tried the program pptpd as server (said to be the easiest), but it didn't work (ifconfig cannot see the tunnel).
+
+Then I use OpenVPN, following this web page to set up server side:
+https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-14-04
+
+Except that at the end I need to start the server via:
+	sudo openvpn --config server.ovpn
+instead of:
+	service openvpn restart
+The reason for this is unknown.
+
+To edit server configuration details:
+	leafpad server.conf
+
+sudo ufw allow 8080
+sudo ufw status
+
+On the client side needs:
+	client1.crt,  client1.key,  ca.crt
+use this to transfer to client computer:
+	scp xxxx yky@xxx.xxx.xxx:/home/yky
+
+To start the client:
+	sudo openvpn hasee2.ovpn 
+
+But anyway, this no longer works in China because OpenVPN is blocked.

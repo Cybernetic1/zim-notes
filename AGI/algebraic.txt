@@ -1,0 +1,30 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-04-25T23:41:59+08:00
+
+====== algebraic ======
+Created Saturday 25 April 2015
+
+空间没有**乘积结构**，但如果有的话，岂不是会 fix 了那 logical structure，则又回到 logic 的苦闷情况。
+
+所以希望空间是 logic formulas 的某种 mixture。
+
+所以 **logic formulas** 不能对应於 **点子**。
+
+昨天令我很开心的是： 如果 KB 表示为 power series，则可以将微细的分类近似。
+
+在连续化的情况下，微细的分类也是连续的，但 Cayley 空间还是不连续的。
+
+退一步想，我们在连续空间得到一答案，然后再 quantize 之。
+
+Cayley 的结构不连续是问题的癥结所在。
+
+或者可以把句子投影到有 redundancy 的空间，……？
+
+换句话说，用 redundancy 表示命题的集合……  
+
+我觉得，命题表示成 distributive redundant 之后便会变得更「连续」…… 为什么？
+
+还有个问题是： 那 distributive representation 有没有乘积结构？
+
+如果每个 点子 都有 2 coordinates，那第二 coordinate 便可以表示 ontological order。  问题是，第二 coordinate 会固定了那 concept，那是不好的。
